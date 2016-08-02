@@ -7,10 +7,11 @@
    brew install ruby
     ```
 
-2. 通过 RubyGems 安装 Jekyll
+2. 通过 RubyGems 安装 Jekyll && bundle
 
     ```
     gem install jekyll
+    gem install bundle
     # 可能需要添加国内 gems 源
     # 添加方法 https://ruby.taobao.org/
     ```
