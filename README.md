@@ -1,4 +1,4 @@
-[Jekyll](http://jekyllrb.com) 。
+[Jekyll](http://jekyllrb.com) 
 
 1. 通过 安装 ruby
 
@@ -15,9 +15,11 @@
     # 添加方法 https://ruby.taobao.org/
     ```
 
-3. 进入 ```src``` 目录，执行：
+3. 执行：
 
     ```
+    git clone https://github.com/himdd/himdd.github.io.git
+    cd himdd.github.io
     bundle install
     ```
 
@@ -31,7 +33,7 @@
     bundle exec jekyll serve
     ```
 
-5. 修改完成后，执行
+5. 如果是自己搭建的环境，修改完成后，执行
 
     ```
     rake build
@@ -49,4 +51,4 @@
     rake deploy
     ```
 
-    会自动提交给 gitlab，并且通过 webhook 回调部署机器
+    会自动提交给 gitlab，并且通过 webhook（需要自己配置） 回调部署机器
