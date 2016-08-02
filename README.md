@@ -1,10 +1,12 @@
 [Jekyll](http://jekyllrb.com) 
 
-1. 通过 安装 ruby
+1. 如果本机版本过低，可通过brew 安装 ruby，否则跳过
 
     ```
-   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-   brew install ruby
+    #安装brew
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    #安装ruby
+    brew install ruby
     ```
 
 2. 通过 RubyGems 安装 Jekyll && bundle
