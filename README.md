@@ -51,4 +51,4 @@
     rake deploy
     ```
 
-    会自动提交给 gitlab，并且通过 webhook（需要自己配置） 回调部署机器
+    会自动提交给 gitlab，并且通过 webhook（需要seting ->Webhooks && Services配置） 回调部署机器
