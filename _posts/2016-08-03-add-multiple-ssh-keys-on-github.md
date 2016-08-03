@@ -4,6 +4,7 @@ title:  "在GitHub多个帐号上添加SSH公钥"
 date:   2016-08-03 09:46:24 +0800
 categories: himdd update
 ---
+
 GitHub后台可以添加多个SSH Keys，但是同一个SSH Keys只能在添加在一个帐号上（添加时提示“Key is already in use”）。理由很容易想到，SSH公钥使用时相当于用户名密码，不可能两个不同的帐号使>用同一个用户名密码。要想在多个GitHub帐号上添加公钥，就要在本地生成多个SSH Keys，每个GitHub帐号对应一个不同的SSH Keys。步骤如下：
 
 1. 生成一个新的SSH KEY
