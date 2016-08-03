@@ -1,5 +1,6 @@
 
 我的blog [http://himdd.github.io](http://himdd.github.io) 
+
 1. 如果本机版本过低，可通过brew 安装 ruby，否则跳过
 
     ```
