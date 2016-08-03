@@ -1,5 +1,5 @@
-[Jekyll](http://jekyllrb.com) 
 
+我的blog [http://himdd.github.io](http://himdd.github.io) 
 1. 如果本机版本过低，可通过brew 安装 ruby，否则跳过
 
     ```
@@ -55,3 +55,5 @@
     rake deploy
     ```
     会自动提交给 github，并且通过 webhook（需要seting ->Webhooks && Services配置） 回调部署机器
+6.更多
+[Jekyll](http://jekyllrb.com) 
