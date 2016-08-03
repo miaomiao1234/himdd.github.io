@@ -19,3 +19,4 @@ github_username:  himdd
 
 # Build settings
 markdown: kramdown
+encoding: utf-8
