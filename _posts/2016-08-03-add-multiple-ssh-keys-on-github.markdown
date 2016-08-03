@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "add multiple ssh keys on github"
+title: "在GitHub多个帐号上添加SSH公钥"
 date:   2016-08-03 09:46:24 +0800
 categories: himdd update
 ---
