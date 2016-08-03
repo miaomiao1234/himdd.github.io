@@ -51,7 +51,7 @@ IdentityFile ~/.ssh/id_rsa2.pub
 
 4. 将GitHub SSH仓库地址中的git@github.com替换成新建的Host别名。
 
-如原地址是：git@github.com:freehost/mail.git，替换后应该是：github2:freehost/mail.git
+如原地址是：`git@github.com:freehost/mail.git`，替换后应该是：`github2:freehost/mail.git`
 如果是新建的仓库，直接使用替换后的URL克隆即可。如果已经使用原地址克隆过了，可以使用命令修改：
 {% highlight bash %}
 git remote set-url origin github2:freehost/mail.git
