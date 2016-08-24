@@ -19,7 +19,7 @@ categories: himdd update
 * "Proxy" -> "Proxy settings..." -> 查看端口（一般为8888）
 * 查看本机ip 自己百度吧
 * 在移动设备的wlan设置代理。
-* 然后打开手机的浏览器，输入charlesproxy.com/getssl， 然后下载安装证书，如果不行，那么把链接换成https://www.charlesproxy.com/documentation/additional/legacy-ssl-proxying/，点击安装 itself 后面的 here 就可以了。 这里有一个`坑`如果是小米手机安装时会提示选着`VPN和应用`或`WLAN`,请择`WLAN`
+* 然后打开手机的浏览器，输入charlesproxy.com/getssl， 然后下载安装证书，如果不行，那么把链接换成https://www.charlesproxy.com/documentation/additional/legacy-ssl-proxying/，点击安装 itself 后面的 here 就可以了。 
 * Proxy" -> "SSL Proxy settings..." -> "SSL Proxying" ->"勾选Enable SSL Proxying" ->"点击添加，弹出下面的对话框，Host 表示你要抓取的 ip 地址或是链接，Port 填写 443"
 
 ## 应该可以看到https的数据
