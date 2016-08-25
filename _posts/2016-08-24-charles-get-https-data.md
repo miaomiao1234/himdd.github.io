@@ -11,7 +11,7 @@ categories: himdd update
 
 ## 配置 Charles 根证书 (参见英文文档 Mac OS X ）
 
-* "首先打开 Charles" -> "SSL Proxying" ->"Install Charless Root Certificate"
+* "Help" -> "SSL Proxying" ->"Install Charless Root Certificate"
 
 * 之后会弹出钥匙串。系统默认是不信任 Charles 的证书的，此时对证书右键，在弹出的下拉菜单中选择 "显示简介" -> "使用此证书时" -> "把使用系统默认改为始终信任。
  
