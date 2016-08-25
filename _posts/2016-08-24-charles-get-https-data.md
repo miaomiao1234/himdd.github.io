@@ -23,6 +23,7 @@ categories: himdd update
 * 在移动设备的wlan设置代理。
 * 然后打开手机的浏览器，输入 http://www.charlesproxy.com/getssl，（这是文档上给出的iOS devices 的方法，经验证android也是ok） 然后下载安装证书。如果是老版，那么把链接换成https://www.charlesproxy.com/documentation/additional/legacy-ssl-proxying/，点击安装 itself 后面的 here 就可以了。 
 * Proxy" -> "SSL Proxy settings..." -> "SSL Proxying" ->"勾选Enable SSL Proxying" ->"点击添加，弹出下面的对话框，Host 表示你要抓取的 ip 地址或是链接，Port 填写 443"
+* 应该可以看到https的数据
+ 
 
-## 应该可以看到https的数据
  折腾了半天发现网上已经有前人给出教程了,如果想看图的同学 [点击](http://www.jianshu.com/p/235bc6c3ca77)
