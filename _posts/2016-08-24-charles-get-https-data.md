@@ -7,9 +7,9 @@ categories: himdd update
 
 我使用的 Charles 版本是 4.0，获取下载地址[https://www.charlesproxy.com/download/](https://www.charlesproxy.com/download/)，下面进入正题：
 
-如果英文比较好，看这里[https://www.charlesproxy.com/documentation/using-charles/ssl-certificates/](https://www.charlesproxy.com/documentation/using-charles/ssl-certificates/)
+如果英文比较好，看这里[https://www.charlesproxy.com/documentation/using-charles/ssl-certificates/](https://www.charlesproxy.com/documentation/using-charles/ssl-certificates/) ，主要看Mac OS X 和iOS devices（经验证android也可按此配置）
 
-## 配置 Charles 根证书 (参见英文文档 Mac OS X ）
+## 配置 Charles 根证书
 
 * "Help" -> "SSL Proxying" ->"Install Charless Root Certificate"
 
@@ -17,7 +17,7 @@ categories: himdd update
  
 *然后关闭，就会发现 charles 的证书已经被信任了
 
-## 在移动设备上配置证书 (参见英文文档 iOS devices ）
+## 在移动设备上配置证书 
 * "Proxy" -> "Proxy settings..." -> 查看端口（一般为8888）
 * 查看本机ip 自己百度吧
 * 在移动设备的wlan设置代理。
