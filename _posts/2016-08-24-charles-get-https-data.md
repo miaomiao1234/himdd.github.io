@@ -6,7 +6,9 @@ categories: himdd update
 ---
 
 我使用的 Charles 版本是 4.0，获取下载地址[https://www.charlesproxy.com/download/](https://www.charlesproxy.com/download/)，下面进入正题：
+
 如果英文比较好，看这里[https://www.charlesproxy.com/documentation/using-charles/ssl-certificates/](https://www.charlesproxy.com/documentation/using-charles/ssl-certificates/)
+
 ## 配置 Charles 根证书 (参见英文文档 Mac OS X ）
 
 * "首先打开 Charles" -> "SSL Proxying" ->"Install Charless Root Certificate"
