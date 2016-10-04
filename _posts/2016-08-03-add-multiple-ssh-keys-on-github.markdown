@@ -10,13 +10,13 @@ GitHub后台可以添加多个SSH Keys，但是同一个SSH Keys只能在添加�
 - 生成一个新的SSH KEY
 
 {% highlight bash %}
-rry@thk:~$ ssh-keygen -t rsa -C 'xx@xx.com'
+rry@thk:~$ ssh-keygen -t rsa -C 'himddheart@gmail.com'
 Generating public/private rsa key pair.
-Enter file in which to save the key (~/.ssh/id_rsa): ~/.ssh/id_rsa2 #这里输入一个新的ssh key文件名
+Enter file in which to save the key (~/.ssh/id_rsa): ~/.ssh/id_rsa_himddheart #这里输入一个新的ssh key文件名
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
-Your identification has been saved in ~/.ssh/id_rsa2.
-Your public key has been saved in ~/.ssh/id_rsa2.pub.
+Your identification has been saved in ~/.ssh/id_rsa_himddheart.
+Your public key has been saved in ~/.ssh/id_rsa_himddheart.pub.
 The key fingerprint is:
 3a:01:17:b3:f9:26:5b:53:b3:69:be:71:a8:66:f6:96 xxxx
 The key is randomart image is:
@@ -31,13 +31,13 @@ The key is randomart image is:
 |       .E..+     |
 |       +.oo      |
 +-----------------+
-larry@thk:~$ ssh-add ~/.ssh/id_rsa2
-Identity added: ~/.ssh/id_rsa2 (~/.ssh/id_rsa2)
+larry@thk:~$ ssh-add ~/.ssh/id_rsa_himddheart
+Identity added: ~/.ssh/id_rsahimddheart (~/.ssh/id_rsa_himddheart)
 {% endhighlight %}
 
-~/.ssh/id_rsa2为新SSH Keys文件名，根据实际情况修改，保证每次不一样即可。
+~/.ssh/id_rsa_himddheart为新SSH Keys文件名，根据实际情况修改，保证每次不一样即可。
 
-- 打开新生成的~/.ssh/id_rsa2.pub文件，将里面的内容添加到GitHub后台。
+- 打开新生成的~/.ssh/id_rsa_himddheart.pub文件，将里面的内容添加到GitHub后台。
 
 - 打开~/.ssh/config文件（没有则创建），添加一个Host：
 
@@ -46,7 +46,7 @@ Identity added: ~/.ssh/id_rsa2 (~/.ssh/id_rsa2)
 Host github2
 HostName github.com
 User git
-IdentityFile ~/.ssh/id_rsa2.pub
+IdentityFile ~/.ssh/id_rsa_himddheart
 {% endhighlight %}
 
 - 将GitHub SSH仓库地址中的git@github.com替换成新建的Host别名。
@@ -56,3 +56,5 @@ IdentityFile ~/.ssh/id_rsa2.pub
 {% highlight bash %}
 git remote set-url origin github2:freehost/mail.git
 {% endhighlight %}
+
+
