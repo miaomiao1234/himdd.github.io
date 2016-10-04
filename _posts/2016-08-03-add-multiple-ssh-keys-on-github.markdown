@@ -49,8 +49,9 @@ User git
 IdentityFile ~/.ssh/id_rsa_himddheart
 {% endhighlight %}
 
-- 将GitHub SSH仓库地址中的git@github.com替换成新建的Host别名。
+将GitHub SSH仓库地址中的git@github.com替换成新建的Host别名。
 
+测试是不是通了`ssh -vT github2`
 如原地址是：`git@github.com:freehost/mail.git`，替换后应该是：`github2:freehost/mail.git`
 如果是新建的仓库，直接使用替换后的URL克隆即可。如果已经使用原地址克隆过了，可以使用命令修改：
 {% highlight bash %}
