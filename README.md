@@ -1,5 +1,5 @@
 
-我的blog [http://miaoliang1234.github.io](http://miaoliang1234.github.io) 
+我的blog [http://miaomiao1234.github.io](http://miaomiao1234.github.io) 
 
 1. 如果本机版本过低，可通过brew 安装 ruby，否则跳过
 
@@ -22,8 +22,8 @@
 3. 执行：
 
     ```
-    git clone https://github.com/himdd/himdd.github.io.git
-    cd himdd.github.io
+    git clone https://github.com/miaomiao1234/miaomiao1234.github.io.git
+    cd miaomiao1234.github.io
     bundle install
     ```
 
