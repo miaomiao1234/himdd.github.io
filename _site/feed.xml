@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>miaoliang</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</description>
+    <link>http://miaomiao1234.github.io/</link>
+    <atom:link href="http://miaomiao1234.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 09 Jan 2018 23:54:27 +0800</pubDate>
+    <lastBuildDate>Tue, 09 Jan 2018 23:54:27 +0800</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>解决libc.so.6: version `GLIBC_2.14&#39; not found问题</title>
+        <description>&lt;h2 id=&quot;安装-48x的gcc&quot;&gt;安装 4.8.x的gcc&lt;/h2&gt;
+&lt;p&gt;自己google吧。
+假设安装在/home/work/soft/gcc-4.8.2&lt;/p&gt;
+&lt;h2 id=&quot;查看&quot;&gt;查看&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;strings /home/work/soft/gcc-4.8.2/lib64/libc.so.6 |grep GLIBC_ 
+GLIBC_2.2.5
+GLIBC_2.2.6
+GLIBC_2.3
+GLIBC_2.3.2
+GLIBC_2.3.3
+GLIBC_2.3.4
+GLIBC_2.4
+GLIBC_2.5
+GLIBC_2.6
+GLIBC_2.7
+GLIBC_2.8
+GLIBC_2.9
+GLIBC_2.10
+GLIBC_2.11
+GLIBC_2.12
+GLIBC_2.13
+GLIBC_2.14
+GLIBC_2.15
+GLIBC_2.16
+GLIBC_2.17
+GLIBC_2.18
+GLIBC_PRIVATE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;patchelf&quot;&gt;patchelf&lt;/h2&gt;
+
+&lt;p&gt;假定找不到GLIBC_2.14的是$ROOT_DIR/node/node(bin文件)。&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;patchelf --set-interpreter /home/work/soft/gcc-4.8.2/lib64/ld-linux-x86-64.so.2  $ROOT_DIR/node/node
+patchelf --set-rpath &#39;$ORIGIN:$ORIGIN/lib:$ORIGIN/lib64:$ORIGIN/../lib:$ORIGIN/../lib64:/home/work/soft/gcc-4.8.2/lib:/home/work/soft/gcc-4.8.2/lib64&#39; $ROOT_DIR/node/node
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Tue, 18 Apr 2017 09:46:24 +0800</pubDate>
+        <link>http://miaomiao1234.github.io/himdd/update/2017/04/18/libc_so_6_version_GLIBC_2_14_not_found.html</link>
+        <guid isPermaLink="true">http://miaomiao1234.github.io/himdd/update/2017/04/18/libc_so_6_version_GLIBC_2_14_not_found.html</guid>
+        
+        
+        <category>himdd</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>解决libc.so.6: version `GLIBC_2.14&#39; not found问题</title>
+        <description>&lt;h2 id=&quot;安装-48x的gcc&quot;&gt;安装 4.8.x的gcc&lt;/h2&gt;
+&lt;p&gt;自己google吧。
+假设安装在/home/work/soft/gcc-4.8.2&lt;/p&gt;
+&lt;h2 id=&quot;查看&quot;&gt;查看&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;strings /home/work/soft/gcc-4.8.2/lib64/libc.so.6 |grep GLIBC_ 
+GLIBC_2.2.5
+GLIBC_2.2.6
+GLIBC_2.3
+GLIBC_2.3.2
+GLIBC_2.3.3
+GLIBC_2.3.4
+GLIBC_2.4
+GLIBC_2.5
+GLIBC_2.6
+GLIBC_2.7
+GLIBC_2.8
+GLIBC_2.9
+GLIBC_2.10
+GLIBC_2.11
+GLIBC_2.12
+GLIBC_2.13
+GLIBC_2.14
+GLIBC_2.15
+GLIBC_2.16
+GLIBC_2.17
+GLIBC_2.18
+GLIBC_PRIVATE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;patchelf&quot;&gt;patchelf&lt;/h2&gt;
+
+&lt;p&gt;假定找不到GLIBC_2.14的是$ROOT_DIR/node/node(bin文件)。&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;patchelf --set-interpreter /home/work/soft/gcc-4.8.2/lib64/ld-linux-x86-64.so.2  $ROOT_DIR/node/node
+patchelf --set-rpath &#39;$ORIGIN:$ORIGIN/lib:$ORIGIN/lib64:$ORIGIN/../lib:$ORIGIN/../lib64:/home/work/soft/gcc-4.8.2/lib:/home/work/soft/gcc-4.8.2/lib64&#39; $ROOT_DIR/node/node
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Tue, 18 Apr 2017 09:46:24 +0800</pubDate>
+        <link>http://miaomiao1234.github.io/himdd/update/2017/04/18/libc.so.6_version_GLIBC_2.14_not_found.html</link>
+        <guid isPermaLink="true">http://miaomiao1234.github.io/himdd/update/2017/04/18/libc.so.6_version_GLIBC_2.14_not_found.html</guid>
+        
+        
+        <category>himdd</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>whistle抓包完美取代charles</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;最近的认识到自己不能再用破解软件了，身为工程师的我，电脑上有破解软件是一件非常可耻的事情。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;然后今天把软件该买的买，该搞替代品的搞替代品，总之一句话，“告别破解，杜绝盗版”。更重要的是，如果有人来找我问，少年你是如何抓包的，然后我告诉他，用的是&lt;code class=&quot;highlighter-rouge&quot;&gt;charles&lt;/code&gt;，然后这人默默的找了一个破解版装上了，为了避免这一场景，我决定搞替代品这趟浑水，还是得趟~~ 当然不差钱的话直接&lt;code class=&quot;highlighter-rouge&quot;&gt;charles&lt;/code&gt;官网购买，下面也不用看了~~ 官网连接我就不给了，你既然找到了这文章，那十有八九是有whistle需求的~~ 情怀扯完了，说说今天的正题。。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;charles&lt;/code&gt;这软件确实不错，只是我偶尔才会用到，买可以，但感觉没有必要，然后就开搞替代品。&lt;/p&gt;
+
+&lt;p&gt;先折腾了一下&lt;code class=&quot;highlighter-rouge&quot;&gt;wireshark&lt;/code&gt;，发现用这货学习网络原理挺好的，让理论可以实践了，如果你在学习网络原理就不要错过了。&lt;/p&gt;
+
+&lt;p&gt;接着就是&lt;code class=&quot;highlighter-rouge&quot;&gt;Mono Fiddler&lt;/code&gt; 在下载&lt;code class=&quot;highlighter-rouge&quot;&gt;Mono framework&lt;/code&gt;时，感觉不是很好，好不容易摆脱了windows，又要搞了xx framework 来支持&lt;code class=&quot;highlighter-rouge&quot;&gt;.net&lt;/code&gt;,忘了说一点，&lt;code class=&quot;highlighter-rouge&quot;&gt;Fiddler&lt;/code&gt;是基于&lt;code class=&quot;highlighter-rouge&quot;&gt;.net&lt;/code&gt;开发的。。想想都感觉蛋碎~~&lt;/p&gt;
+
+&lt;p&gt;于是乎，我看到了今天的主角&lt;code class=&quot;highlighter-rouge&quot;&gt;whistle&lt;/code&gt;，然后我看了一下教程，感觉阿里搞着货，真的是造福程序狗们啊。。搞了一波，然后用上了&lt;code class=&quot;highlighter-rouge&quot;&gt;whistle&lt;/code&gt;,感觉超神了~~ 用户体验真的很不错~~&lt;/p&gt;
+
+&lt;p&gt;这回真的扯完了，上干货：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://whistle.gitbooks.io/help/content/install.html&quot;&gt;whistle安装&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://whistle.gitbooks.io/help/content/webui/online.html&quot;&gt;移动设备抓包&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://whistle.gitbooks.io/help/content/webui/https.html&quot;&gt;https抓包&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 05 Oct 2016 09:46:24 +0800</pubDate>
+        <link>http://miaomiao1234.github.io/himdd/update/2016/10/05/whistle-instead-of-charles-on-mac.html</link>
+        <guid isPermaLink="true">http://miaomiao1234.github.io/himdd/update/2016/10/05/whistle-instead-of-charles-on-mac.html</guid>
+        
+        
+        <category>himdd</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>在mac上好用的markdown同步预览功能软件</title>
+        <description>&lt;p&gt;网上收了一下一堆介绍，自行google,不过没有发现自己想要的东西，然后，看到&lt;code class=&quot;highlighter-rouge&quot;&gt;MWeb Lite&lt;/code&gt;，功能具体看 &lt;a href=&quot;http://zh.mweb.im/&quot;&gt;MWeb Lite介绍&lt;/a&gt;。我看到了一个外部模式，完全符合我的要求，然后在 &lt;code class=&quot;highlighter-rouge&quot;&gt;菜单 -&amp;gt; 偏好设置 -&amp;gt; 通用设置 -&amp;gt; 启动时打开外部模式&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;然后一个markdown同步预览编辑器到手~~&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 04 Oct 2016 09:46:24 +0800</pubDate>
+        <link>http://miaomiao1234.github.io/himdd/update/2016/10/04/markdown-preview-on-mac.html</link>
+        <guid isPermaLink="true">http://miaomiao1234.github.io/himdd/update/2016/10/04/markdown-preview-on-mac.html</guid>
+        
+        
+        <category>himdd</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>mysql索引建立规则</title>
+        <description>&lt;h2 id=&quot;问题&quot;&gt;问题&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2386852/mysql-low-cardinality-selectivity-columns-how-to-index&quot;&gt;点击查看&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;索引建立准则&quot;&gt;索引建立准则：&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;能筛选出较少的行数的字段放前面。&lt;/li&gt;
+  &lt;li&gt;如果区分度太小的字段可以不建立索引，如&lt;code class=&quot;highlighter-rouge&quot;&gt;status&lt;/code&gt;只有两三种值。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;select&quot;&gt;select&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;能筛选出较少的行数的条件放前面。&lt;/li&gt;
+  &lt;li&gt;mysql 会优化where顺序&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 22 Sep 2016 21:26:24 +0800</pubDate>
+        <link>http://miaomiao1234.github.io/himdd/update/2016/09/22/how-to-index-for-mysql.html</link>
+        <guid isPermaLink="true">http://miaomiao1234.github.io/himdd/update/2016/09/22/how-to-index-for-mysql.html</guid>
+        
+        
+        <category>himdd</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>使用 Charles 获取 https 的数据</title>
+        <description>&lt;p&gt;我使用的 Charles 版本是 4.0，获取下载地址&lt;a href=&quot;https://www.charlesproxy.com/download/&quot;&gt;https://www.charlesproxy.com/download/&lt;/a&gt;，下面进入正题：&lt;/p&gt;
+
+&lt;p&gt;如果英文比较好，看这里&lt;a href=&quot;https://www.charlesproxy.com/documentation/using-charles/ssl-certificates/&quot;&gt;https://www.charlesproxy.com/documentation/using-charles/ssl-certificates/&lt;/a&gt; ，主要看Mac OS X 和iOS devices（经验证android也可按此配置）&lt;/p&gt;
+
+&lt;h2 id=&quot;配置-charles-根证书&quot;&gt;配置 Charles 根证书&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;“Help” -&amp;gt; “SSL Proxying” -&amp;gt;”Install Charless Root Certificate”&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;之后会弹出钥匙串。系统默认是不信任 Charles 的证书的，此时对证书右键，在弹出的下拉菜单中选择 “显示简介” -&amp;gt; “使用此证书时” -&amp;gt; “把使用系统默认改为始终信任。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;*然后关闭，就会发现 charles 的证书已经被信任了&lt;/p&gt;
+
+&lt;h2 id=&quot;在移动设备上配置证书&quot;&gt;在移动设备上配置证书&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;“Proxy” -&amp;gt; “Proxy settings…” -&amp;gt; 查看端口（一般为8888）&lt;/li&gt;
+  &lt;li&gt;查看本机ip 自己百度吧&lt;/li&gt;
+  &lt;li&gt;在移动设备的wlan设置代理。&lt;/li&gt;
+  &lt;li&gt;然后打开手机的浏览器，输入 http://www.charlesproxy.com/getssl，（这是文档上给出的iOS devices 的方法，经验证android也是ok） 然后下载安装证书。如果是老版，那么把链接换成https://www.charlesproxy.com/documentation/additional/legacy-ssl-proxying/，点击安装 itself 后面的 here 就可以了。&lt;/li&gt;
+  &lt;li&gt;Proxy” -&amp;gt; “SSL Proxy settings…” -&amp;gt; “SSL Proxying” -&amp;gt;”勾选Enable SSL Proxying” -&amp;gt;”点击添加，弹出下面的对话框，Host 表示你要抓取的 ip 地址或是链接，Port 填写 443”&lt;/li&gt;
+  &lt;li&gt;应该可以看到https的数据&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;折腾了半天发现网上已经有前人给出教程了,如果想看图的同学 &lt;a href=&quot;http://www.jianshu.com/p/235bc6c3ca77&quot;&gt;点击&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 25 Aug 2016 09:27:24 +0800</pubDate>
+        <link>http://miaomiao1234.github.io/himdd/update/2016/08/25/charles-get-https-data.html</link>
+        <guid isPermaLink="true">http://miaomiao1234.github.io/himdd/update/2016/08/25/charles-get-https-data.html</guid>
+        
+        
+        <category>himdd</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>在GitHub多个帐号上添加SSH公钥</title>
+        <description>&lt;p&gt;GitHub后台可以添加多个SSH Keys，但是同一个SSH Keys只能在添加在一个帐号上（添加时提示“Key is already in use”）。理由很容易想到，SSH公钥使用时相当于用户名密码，不可能两个不同的帐号使&amp;gt;用同一个用户名密码。要想在多个GitHub帐号上添加公钥，就要在本地生成多个SSH Keys，每个GitHub帐号对应一个不同的SSH Keys。步骤如下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;生成一个新的SSH KEY&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;rry@thk:~$ &lt;/span&gt;ssh-keygen -t rsa -C &lt;span class=&quot;s1&quot;&gt;&#39;himddheart@gmail.com&#39;&lt;/span&gt;
+Generating public/private rsa key pair.
+Enter file &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;which to save the key &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;~/.ssh/id_rsa&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: ~/.ssh/id_rsa_himddheart &lt;span class=&quot;c&quot;&gt;#这里输入一个新的ssh key文件名&lt;/span&gt;
+Enter passphrase &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;empty &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;no passphrase&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:
+Enter same passphrase again:
+Your identification has been saved &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; ~/.ssh/id_rsa_himddheart.
+Your public key has been saved &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; ~/.ssh/id_rsa_himddheart.pub.
+The key fingerprint is:
+3a:01:17:b3:f9:26:5b:53:b3:69:be:71:a8:66:f6:96 xxxx
+The key is randomart image is:
++--[ RSA 2048]----+
+|      o          |
+|       &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;         |
+|    . +   o      |
+|     . . . +     |
+|      o S +      |
+|       B + .     |
+|      +  .+ +    |
+|       .E..+     |
+|       +.oo      |
++-----------------+
+&lt;span class=&quot;gp&quot;&gt;larry@thk:~$ &lt;/span&gt;ssh-add ~/.ssh/id_rsa_himddheart
+Identity added: ~/.ssh/id_rsahimddheart &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;~/.ssh/id_rsa_himddheart&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;~/.ssh/id_rsa_himddheart为新SSH Keys文件名，根据实际情况修改，保证每次不一样即可。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;打开新生成的~/.ssh/id_rsa_himddheart.pub文件，将里面的内容添加到GitHub后台。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;打开~/.ssh/config文件（没有则创建），添加一个Host：&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#建一个github别名，新建的帐号使用这个别名做克隆和更新&lt;/span&gt;
+Host github2
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa_himddheart&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;将GitHub SSH仓库地址中的git@github.com替换成新建的Host别名。&lt;/p&gt;
+
+&lt;p&gt;测试是不是通了&lt;code class=&quot;highlighter-rouge&quot;&gt;ssh -vT github2&lt;/code&gt;
+如原地址是：&lt;code class=&quot;highlighter-rouge&quot;&gt;git@github.com:freehost/mail.git&lt;/code&gt;，替换后应该是：&lt;code class=&quot;highlighter-rouge&quot;&gt;github2:freehost/mail.git&lt;/code&gt;
+如果是新建的仓库，直接使用替换后的URL克隆即可。如果已经使用原地址克隆过了，可以使用命令修改：&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git remote &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;-url origin github2:freehost/mail.git&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Wed, 03 Aug 2016 09:46:24 +0800</pubDate>
+        <link>http://miaomiao1234.github.io/himdd/update/2016/08/03/add-multiple-ssh-keys-on-github.html</link>
+        <guid isPermaLink="true">http://miaomiao1234.github.io/himdd/update/2016/08/03/add-multiple-ssh-keys-on-github.html</guid>
+        
+        
+        <category>himdd</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 02 Aug 2016 21:26:24 +0800</pubDate>
+        <link>http://miaomiao1234.github.io/himdd/update/2016/08/02/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://miaomiao1234.github.io/himdd/update/2016/08/02/welcome-to-jekyll.html</guid>
+        
+        
+        <category>himdd</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+  </channel>
+</rss>
