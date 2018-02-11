@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>miaoliang</title>
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
+  <title>使用 Charles 获取 https 的数据</title>
+  <meta name="description" content="我使用的 Charles 版本是 4.0，获取下载地址https://www.charlesproxy.com/download/，下面进入正题：">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://miaomiao1234.github.io/">
+  <link rel="canonical" href="http://miaomiao1234.github.io/miaomiao1234/update/2016/08/25/charles-get-https-data.html">
   <link rel="alternate" type="application/rss+xml" title="miaoliang" href="http://miaomiao1234.github.io/feed.xml">
 </head>
 
@@ -55,81 +54,66 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">使用 Charles 获取 https 的数据</h1>
+    <p class="post-meta"><time datetime="2016-08-25T09:27:24+08:00" itemprop="datePublished">Aug 25, 2016</time></p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Apr 18, 2017</span>
+  <div class="post-content" itemprop="articleBody">
+    <p>我使用的 Charles 版本是 4.0，获取下载地址<a href="https://www.charlesproxy.com/download/">https://www.charlesproxy.com/download/</a>，下面进入正题：</p>
 
-        <h2>
-          <a class="post-link" href="/miaomiao1234/update/2017/04/18/libc_so_6_version_GLIBC_2_14_not_found.html">解决libc.so.6: version `GLIBC_2.14' not found问题</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Apr 18, 2017</span>
+<p>如果英文比较好，看这里<a href="https://www.charlesproxy.com/documentation/using-charles/ssl-certificates/">https://www.charlesproxy.com/documentation/using-charles/ssl-certificates/</a> ，主要看Mac OS X 和iOS devices（经验证android也可按此配置）</p>
 
-        <h2>
-          <a class="post-link" href="/miaomiao1234/update/2017/04/18/libc.so.6_version_GLIBC_2.14_not_found.html">解决libc.so.6: version `GLIBC_2.14' not found问题</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 5, 2016</span>
+<h2 id="配置-charles-根证书">配置 Charles 根证书</h2>
 
-        <h2>
-          <a class="post-link" href="/miaomiao1234/update/2016/10/05/whistle-instead-of-charles-on-mac.html">whistle抓包完美取代charles</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 4, 2016</span>
+<ul>
+  <li>
+    <p>“Help” -&gt; “SSL Proxying” -&gt;”Install Charless Root Certificate”</p>
+  </li>
+  <li>
+    <p>之后会弹出钥匙串。系统默认是不信任 Charles 的证书的，此时对证书右键，在弹出的下拉菜单中选择 “显示简介” -&gt; “使用此证书时” -&gt; “把使用系统默认改为始终信任。</p>
+  </li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/miaomiao1234/update/2016/10/04/markdown-preview-on-mac.html">在mac上好用的markdown同步预览功能软件</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 22, 2016</span>
+<p>*然后关闭，就会发现 charles 的证书已经被信任了</p>
 
-        <h2>
-          <a class="post-link" href="/miaomiao1234/update/2016/09/22/how-to-index-for-mysql.html">mysql索引建立规则</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 25, 2016</span>
+<h2 id="在移动设备上配置证书">在移动设备上配置证书</h2>
+<ul>
+  <li>“Proxy” -&gt; “Proxy settings…” -&gt; 查看端口（一般为8888）</li>
+  <li>查看本机ip 自己百度吧</li>
+  <li>在移动设备的wlan设置代理。</li>
+  <li>然后打开手机的浏览器，输入 http://www.charlesproxy.com/getssl，（这是文档上给出的iOS devices 的方法，经验证android也是ok） 然后下载安装证书。如果是老版，那么把链接换成https://www.charlesproxy.com/documentation/additional/legacy-ssl-proxying/，点击安装 itself 后面的 here 就可以了。</li>
+  <li>Proxy” -&gt; “SSL Proxy settings…” -&gt; “SSL Proxying” -&gt;”勾选Enable SSL Proxying” -&gt;”点击添加，弹出下面的对话框，Host 表示你要抓取的 ip 地址或是链接，Port 填写 443”</li>
+  <li>应该可以看到https的数据</li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/miaomiao1234/update/2016/08/25/charles-get-https-data.html">使用 Charles 获取 https 的数据</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 3, 2016</span>
+<p>折腾了半天发现网上已经有前人给出教程了,如果想看图的同学 <a href="http://www.jianshu.com/p/235bc6c3ca77">点击</a></p>
 
-        <h2>
-          <a class="post-link" href="/miaomiao1234/update/2016/08/03/add-multiple-ssh-keys-on-github.html">在GitHub多个帐号上添加SSH公钥</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 2, 2016</span>
+  </div>
+<div id="disqus_thread"></div>
+<script>
 
-        <h2>
-          <a class="post-link" href="/miaomiao1234/update/2016/08/02/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
-</div>
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+/*
+var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//himdd.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                    
+</article>
 
       </div>
     </div>

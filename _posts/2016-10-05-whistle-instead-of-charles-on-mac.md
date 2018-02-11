@@ -2,7 +2,7 @@
 layout: post
 title: "whistle抓包完美取代charles"
 date:   2016-10-05 09:46:24 +0800
-categories: himdd update
+categories: miaomiao1234 update
 ---
 
 >最近的认识到自己不能再用破解软件了，身为工程师的我，电脑上有破解软件是一件非常可耻的事情。

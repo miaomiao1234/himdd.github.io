@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>miaoliang</title>
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
+  <title>whistle抓包完美取代charles</title>
+  <meta name="description" content="  最近的认识到自己不能再用破解软件了，身为工程师的我，电脑上有破解软件是一件非常可耻的事情。">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://miaomiao1234.github.io/">
+  <link rel="canonical" href="http://miaomiao1234.github.io/miaomiao1234/update/2016/10/05/whistle-instead-of-charles-on-mac.html">
   <link rel="alternate" type="application/rss+xml" title="miaoliang" href="http://miaomiao1234.github.io/feed.xml">
 </head>
 
@@ -55,81 +54,66 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">whistle抓包完美取代charles</h1>
+    <p class="post-meta"><time datetime="2016-10-05T09:46:24+08:00" itemprop="datePublished">Oct 5, 2016</time></p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Apr 18, 2017</span>
+  <div class="post-content" itemprop="articleBody">
+    <blockquote>
+  <p>最近的认识到自己不能再用破解软件了，身为工程师的我，电脑上有破解软件是一件非常可耻的事情。</p>
+</blockquote>
 
-        <h2>
-          <a class="post-link" href="/miaomiao1234/update/2017/04/18/libc_so_6_version_GLIBC_2_14_not_found.html">解决libc.so.6: version `GLIBC_2.14' not found问题</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Apr 18, 2017</span>
+<p>然后今天把软件该买的买，该搞替代品的搞替代品，总之一句话，“告别破解，杜绝盗版”。更重要的是，如果有人来找我问，少年你是如何抓包的，然后我告诉他，用的是<code class="highlighter-rouge">charles</code>，然后这人默默的找了一个破解版装上了，为了避免这一场景，我决定搞替代品这趟浑水，还是得趟~~ 当然不差钱的话直接<code class="highlighter-rouge">charles</code>官网购买，下面也不用看了~~ 官网连接我就不给了，你既然找到了这文章，那十有八九是有whistle需求的~~ 情怀扯完了，说说今天的正题。。</p>
 
-        <h2>
-          <a class="post-link" href="/miaomiao1234/update/2017/04/18/libc.so.6_version_GLIBC_2.14_not_found.html">解决libc.so.6: version `GLIBC_2.14' not found问题</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 5, 2016</span>
+<p><code class="highlighter-rouge">charles</code>这软件确实不错，只是我偶尔才会用到，买可以，但感觉没有必要，然后就开搞替代品。</p>
 
-        <h2>
-          <a class="post-link" href="/miaomiao1234/update/2016/10/05/whistle-instead-of-charles-on-mac.html">whistle抓包完美取代charles</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 4, 2016</span>
+<p>先折腾了一下<code class="highlighter-rouge">wireshark</code>，发现用这货学习网络原理挺好的，让理论可以实践了，如果你在学习网络原理就不要错过了。</p>
 
-        <h2>
-          <a class="post-link" href="/miaomiao1234/update/2016/10/04/markdown-preview-on-mac.html">在mac上好用的markdown同步预览功能软件</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 22, 2016</span>
+<p>接着就是<code class="highlighter-rouge">Mono Fiddler</code> 在下载<code class="highlighter-rouge">Mono framework</code>时，感觉不是很好，好不容易摆脱了windows，又要搞了xx framework 来支持<code class="highlighter-rouge">.net</code>,忘了说一点，<code class="highlighter-rouge">Fiddler</code>是基于<code class="highlighter-rouge">.net</code>开发的。。想想都感觉蛋碎~~</p>
 
-        <h2>
-          <a class="post-link" href="/miaomiao1234/update/2016/09/22/how-to-index-for-mysql.html">mysql索引建立规则</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 25, 2016</span>
+<p>于是乎，我看到了今天的主角<code class="highlighter-rouge">whistle</code>，然后我看了一下教程，感觉阿里搞着货，真的是造福程序狗们啊。。搞了一波，然后用上了<code class="highlighter-rouge">whistle</code>,感觉超神了~~ 用户体验真的很不错~~</p>
 
-        <h2>
-          <a class="post-link" href="/miaomiao1234/update/2016/08/25/charles-get-https-data.html">使用 Charles 获取 https 的数据</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 3, 2016</span>
+<p>这回真的扯完了，上干货：</p>
 
-        <h2>
-          <a class="post-link" href="/miaomiao1234/update/2016/08/03/add-multiple-ssh-keys-on-github.html">在GitHub多个帐号上添加SSH公钥</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 2, 2016</span>
+<ul>
+  <li>
+    <p><a href="https://whistle.gitbooks.io/help/content/install.html">whistle安装</a></p>
+  </li>
+  <li>
+    <p><a href="https://whistle.gitbooks.io/help/content/webui/online.html">移动设备抓包</a></p>
+  </li>
+  <li>
+    <p><a href="https://whistle.gitbooks.io/help/content/webui/https.html">https抓包</a></p>
+  </li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/miaomiao1234/update/2016/08/02/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-        </h2>
-      </li>
-    
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+  </div>
+<div id="disqus_thread"></div>
+<script>
 
-</div>
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+/*
+var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//himdd.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                    
+</article>
 
       </div>
     </div>

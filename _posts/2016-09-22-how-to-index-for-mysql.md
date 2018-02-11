@@ -2,7 +2,7 @@
 layout: post
 title:  "mysql索引建立规则"
 date:   2016-09-22 21:26:24 +0800
-categories: himdd update
+categories: miaomiao1234 update
 ---
 
 ## 问题

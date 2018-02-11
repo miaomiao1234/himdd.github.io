@@ -2,7 +2,7 @@
 layout: post
 title: "解决libc.so.6: version `GLIBC_2.14' not found问题"
 date:   2017-04-18 09:46:24 +0800
-categories: himdd update
+categories: miaomiao1234 update
 ---
 
 ## 安装 4.8.x的gcc 

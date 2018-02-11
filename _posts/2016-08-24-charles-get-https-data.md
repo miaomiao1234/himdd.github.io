@@ -2,7 +2,7 @@
 layout: post
 title: "使用 Charles 获取 https 的数据"
 date:   2016-08-24 18:27:24 -0700
-categories: himdd update
+categories: miaomiao1234 update
 ---
 
 我使用的 Charles 版本是 4.0，获取下载地址[https://www.charlesproxy.com/download/](https://www.charlesproxy.com/download/)，下面进入正题：
