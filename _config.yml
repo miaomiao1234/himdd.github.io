@@ -19,4 +19,7 @@ github_username: miaomiao1234
 
 # Build settings
 markdown: kramdown
+
+kramdown:
+  input: GFM
 encoding: utf-8
