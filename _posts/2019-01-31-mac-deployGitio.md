@@ -37,7 +37,7 @@ bundle install
 ```
 rake
 ```
-`默认访问地址为：` http://127.0.0.1:4000/ <br/>
+`默认访问地址为：` <a href=" http://127.0.0.1:4000/ ">http://127.0.0.1:4000/</a> <br/>
 或者
 ```
 bundle exec jekyll serve
