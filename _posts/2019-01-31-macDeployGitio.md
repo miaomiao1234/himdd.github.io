@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "mac上部署GitHub博客jekyll环境"
-date:   2019-01-31 15:30:24 +0800
+date:   2019-01-31 15:20:24 +0800
 categories: miaomiao1234 update
 ---
 
@@ -21,7 +21,7 @@ gem install jekyll
 gem install bundle
 ```
 `#可能需要添加国内 gems 源`<br/>
-`#添加方法: `https://ruby.taobao.org/
+`#添加方法: ` <a href="https://ruby.taobao.org/">https://ruby.taobao.org/</a>
 
 ### 3.执行
 
